@@ -5,10 +5,44 @@ const PORT = 8080;
 
 app.use(cors({}));
 
+app.get('/cercles',(req,res)=>{
+    res.json([
+        {
+            "name":"Casual",
+            "img":"https://lp2.hm.com/hmgoepprod?set=format%5Bwebp%5D%2Cquality%5B79%5D%2Csource%5B%2F0b%2Fd2%2F0bd2e37f1b110bf608e22912322fd63fa4027986.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url%5Bfile%3A%2Fproduct%2Fmain%5D"
+        },
+        {
+            "name":"Women",
+            "img":"https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F77%2F2e%2F772eb25dc27ba7f481da52a6669083be0fdc7637.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]"
+        },
+        {
+            "name":"Beauty",
+            "img":"https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F82%2F86%2F828631126ee629e09d1b194e4aa3420eeba0f837.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5Bladies_beauty_eyes_eyeshadow%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]"
+        },
+        {
+            "name":"Kids",
+            "img":"https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fae%2F0e%2Fae0e44e1f7a493ee9261e4d6df055a3bb7d1f0ae.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]"
+        },
+        {
+            "name":"Men",
+            "img":"https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F0d%2Fa5%2F0da5ed479b974b5489e541a099be93615f62cbfb.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]"
+        },
+        {
+            "name":"Divided",
+            "img":"https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F42%2F4d%2F424d20a2905c588182e95311f51d491490885be9.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]"
+        },
+        {
+            "name":"Home",
+            "img":"https://lp2.hm.com/hmgoepprod?set=format%5Bwebp%5D%2Cquality%5B79%5D%2Csource%5B%2F2f%2F72%2F2f7204fe06a0319a47c2c4be00036af0317406da.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BENVIRONMENT%5D%2Cres%5Bm%5D%2Chmver%5B3%5D&call=url%5Bfile%3A%2Fproduct%2Fmain%5D"
+        }
+    ])
 
+})
 app.get('/', (req,res)=> {
     res.json([
-        {"img":"https://lp2.hm.com/hmgoepprod?set=width[800],quality[80],options[limit]&source=url[https://www2.hm.com/content/dam/ladies_s06/october_2022/1126c/1126C-3x2-bewitch-the-night.jpg]&scale=width[global.width],height[15000],options[global.options]&sink=format[jpg],quality[global.quality]"},
+        {"name":"Blazers","to":"/blazers","img":"https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2F1a%2Fce%2F1aced65727d6966fbe0f6d8417895ea3e130b9f8.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]"},
+        {"name":"Boots","to":"/boots","img":"https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Ffb%2Ff1%2Ffbf178c0ee76d6a18a385d2f21246f49c63f74e0.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]"},
+        {"name":"Jackets","to":"/jackets","img":"https://lp2.hm.com/hmgoepprod?set=quality%5B79%5D%2Csource%5B%2Fcb%2Fbe%2Fcbbeebcb7e5a14c54cba5c2cb08d0125e7de2aa2.jpg%5D%2Corigin%5Bdam%5D%2Ccategory%5B%5D%2Ctype%5BLOOKBOOK%5D%2Cres%5Bm%5D%2Chmver%5B1%5D&call=url[file:/product/main]"},
     ])
 })
 
